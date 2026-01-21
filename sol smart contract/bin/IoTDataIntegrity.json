@@ -1,0 +1,1264 @@
+{
+    "contractName": "IoTDataIntegrity",
+    "abi": [
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": false,
+                    "internalType": "string",
+                    "name": "batchId",
+                    "type": "string"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string",
+                    "name": "timePeriod",
+                    "type": "string"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "string",
+                    "name": "dataHash",
+                    "type": "string"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "timestamp",
+                    "type": "uint256"
+                }
+            ],
+            "name": "DataStored",
+            "type": "event"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_batchId",
+                    "type": "string"
+                }
+            ],
+            "name": "getBatchRecord",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "string",
+                    "name": "_batchId",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_timePeriod",
+                    "type": "string"
+                },
+                {
+                    "internalType": "string",
+                    "name": "_dataHash",
+                    "type": "string"
+                }
+            ],
+            "name": "storeDataHash",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.33+commit.64118f21\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"batchId\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"timePeriod\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"dataHash\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"DataStored\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_batchId\",\"type\":\"string\"}],\"name\":\"getBatchRecord\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_batchId\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_timePeriod\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_dataHash\",\"type\":\"string\"}],\"name\":\"storeDataHash\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/jonathanjeshua/AuthentiX/sol smart contract/food_safety.sol\":\"IoTDataIntegrity\"},\"evmVersion\":\"osaka\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"/Users/jonathanjeshua/AuthentiX/sol smart contract/food_safety.sol\":{\"keccak256\":\"0x7787971b78c564e18bbccf6c63ee88e1b726e50aae2a83530967f322df297f65\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://9125aa54e3fca189afcd7e8aa2a477e597a61474e9f96637c7f72d87f5562ea3\",\"dweb:/ipfs/QmWR8ftgdRyCPgMcT32KG4qEnB9myavFpWtrcpCB9cMEca\"]}},\"version\":1}",
+    "bytecode": "6080806040523460155761075e908161001a8239f35b5f80fdfe60806040526004361015610011575f80fd5b5f3560e01c8063557c0563146104ae57639b251eae1461002f575f80fd5b346104aa5760603660031901126104aa5760043567ffffffffffffffff81116104aa57610060903690600401610597565b60243567ffffffffffffffff81116104aa57610080903690600401610597565b60443567ffffffffffffffff81116104aa576100a0903690600401610597565b90604051926100ae84610559565b808452602084019382855260408101948486526060820190428252604051602081865180838901835e81015f815203019020925180519067ffffffffffffffff82116103085781906101008654610650565b601f8111610451575b50602090601f83116001146103ee575f926103e3575b50508160011b915f199060031b1c19161783555b518051600184019167ffffffffffffffff82116103085781906101568454610650565b601f811161038a575b50602090601f8311600114610327575f9261031c575b50508160011b915f199060031b1c19161790555b60028201955195865167ffffffffffffffff8111610308576101ab8254610650565b601f81116102b7575b506020601f821160011461022c57918161021c969594926003947fac88869750298bebd7a88efdd702354a73a7c715232bf57045431d45beba4f149b5f92610221575b50508160011b915f1990861b1c19161790555b51910155604051938493429285610611565b0390a1005b015190505f806101f7565b601f19821698835f52815f20995f5b81811061029f5750927fac88869750298bebd7a88efdd702354a73a7c715232bf57045431d45beba4f149a600395936001938361021c9b9a999710610288575b505050811b01905561020a565b01515f1983881b60f8161c191690555f808061027b565b838301518c556001909b019a6020938401930161023b565b818111156101b457825f5260205f20601f830160051c9060208410610300575b81601f9101920160051c03905f5b8281106102f35750506101b4565b5f828201556001016102e5565b5f91506102d7565b634e487b7160e01b5f52604160045260245ffd5b015190505f80610175565b5f8581528281209350601f198516905b818110610372575090846001959493921061035a575b505050811b019055610189565b01515f1960f88460031b161c191690555f808061034d565b92936020600181928786015181550195019301610337565b8281111561015f57909150835f5260205f20601f840160051c90602085106103db575b849392601f0160051c82900391015f5b8281106103cb57505061015f565b5f818301558594506001016103bd565b5f91506103ad565b015190505f8061011f565b5f8781528281209350601f198516905b8181106104395750908460019594939210610421575b505050811b018355610133565b01515f1960f88460031b161c191690555f8080610414565b929360206001819287860151815501950193016103fe565b8281111561010957909150855f5260205f20601f840160051c90602085106104a2575b849392601f0160051c82900391015f5b828110610492575050610109565b5f81830155859450600101610484565b5f9150610474565b5f80fd5b346104aa5760203660031901126104aa5760043567ffffffffffffffff81116104aa5760206104e281923690600401610597565b604051928184925191829101835e81015f81520301902060405161050581610559565b61050e82610688565b815261055561051f60018401610688565b9160208101928352600361053560028601610688565b948560408401520154908160608201525192519360405194859485610611565b0390f35b6080810190811067ffffffffffffffff82111761030857604052565b90601f8019910116810190811067ffffffffffffffff82111761030857604052565b81601f820112156104aa5780359067ffffffffffffffff821161030857604051926105cc601f8401601f191660200185610575565b828452602083830101116104aa57815f926020809301838601378301015290565b805180835260209291819084018484015e5f828201840152601f01601f1916010190565b94939261063d60609361062f61064b9460808a5260808a01906105ed565b9088820360208a01526105ed565b9086820360408801526105ed565b930152565b90600182811c9216801561067e575b602083101461066a57565b634e487b7160e01b5f52602260045260245ffd5b91607f169161065f565b9060405191825f82549261069b84610650565b808452936001811690811561070657506001146106c2575b506106c092500383610575565b565b90505f9291925260205f20905f915b8183106106ea5750509060206106c0928201015f6106b3565b60209193508060019154838589010152019101909184926106d1565b9050602092506106c094915060ff191682840152151560051b8201015f6106b356fea26469706673582212204cc726a082ff4eb8bd615672137cb505489a605f8ba2954e882ec0a6ac00292d64736f6c63430008210033",
+    "deployedBytecode": "60806040526004361015610011575f80fd5b5f3560e01c8063557c0563146104ae57639b251eae1461002f575f80fd5b346104aa5760603660031901126104aa5760043567ffffffffffffffff81116104aa57610060903690600401610597565b60243567ffffffffffffffff81116104aa57610080903690600401610597565b60443567ffffffffffffffff81116104aa576100a0903690600401610597565b90604051926100ae84610559565b808452602084019382855260408101948486526060820190428252604051602081865180838901835e81015f815203019020925180519067ffffffffffffffff82116103085781906101008654610650565b601f8111610451575b50602090601f83116001146103ee575f926103e3575b50508160011b915f199060031b1c19161783555b518051600184019167ffffffffffffffff82116103085781906101568454610650565b601f811161038a575b50602090601f8311600114610327575f9261031c575b50508160011b915f199060031b1c19161790555b60028201955195865167ffffffffffffffff8111610308576101ab8254610650565b601f81116102b7575b506020601f821160011461022c57918161021c969594926003947fac88869750298bebd7a88efdd702354a73a7c715232bf57045431d45beba4f149b5f92610221575b50508160011b915f1990861b1c19161790555b51910155604051938493429285610611565b0390a1005b015190505f806101f7565b601f19821698835f52815f20995f5b81811061029f5750927fac88869750298bebd7a88efdd702354a73a7c715232bf57045431d45beba4f149a600395936001938361021c9b9a999710610288575b505050811b01905561020a565b01515f1983881b60f8161c191690555f808061027b565b838301518c556001909b019a6020938401930161023b565b818111156101b457825f5260205f20601f830160051c9060208410610300575b81601f9101920160051c03905f5b8281106102f35750506101b4565b5f828201556001016102e5565b5f91506102d7565b634e487b7160e01b5f52604160045260245ffd5b015190505f80610175565b5f8581528281209350601f198516905b818110610372575090846001959493921061035a575b505050811b019055610189565b01515f1960f88460031b161c191690555f808061034d565b92936020600181928786015181550195019301610337565b8281111561015f57909150835f5260205f20601f840160051c90602085106103db575b849392601f0160051c82900391015f5b8281106103cb57505061015f565b5f818301558594506001016103bd565b5f91506103ad565b015190505f8061011f565b5f8781528281209350601f198516905b8181106104395750908460019594939210610421575b505050811b018355610133565b01515f1960f88460031b161c191690555f8080610414565b929360206001819287860151815501950193016103fe565b8281111561010957909150855f5260205f20601f840160051c90602085106104a2575b849392601f0160051c82900391015f5b828110610492575050610109565b5f81830155859450600101610484565b5f9150610474565b5f80fd5b346104aa5760203660031901126104aa5760043567ffffffffffffffff81116104aa5760206104e281923690600401610597565b604051928184925191829101835e81015f81520301902060405161050581610559565b61050e82610688565b815261055561051f60018401610688565b9160208101928352600361053560028601610688565b948560408401520154908160608201525192519360405194859485610611565b0390f35b6080810190811067ffffffffffffffff82111761030857604052565b90601f8019910116810190811067ffffffffffffffff82111761030857604052565b81601f820112156104aa5780359067ffffffffffffffff821161030857604051926105cc601f8401601f191660200185610575565b828452602083830101116104aa57815f926020809301838601378301015290565b805180835260209291819084018484015e5f828201840152601f01601f1916010190565b94939261063d60609361062f61064b9460808a5260808a01906105ed565b9088820360208a01526105ed565b9086820360408801526105ed565b930152565b90600182811c9216801561067e575b602083101461066a57565b634e487b7160e01b5f52602260045260245ffd5b91607f169161065f565b9060405191825f82549261069b84610650565b808452936001811690811561070657506001146106c2575b506106c092500383610575565b565b90505f9291925260205f20905f915b8183106106ea5750509060206106c0928201015f6106b3565b60209193508060019154838589010152019101909184926106d1565b9050602092506106c094915060ff191682840152151560051b8201015f6106b356fea26469706673582212204cc726a082ff4eb8bd615672137cb505489a605f8ba2954e882ec0a6ac00292d64736f6c63430008210033",
+    "sourceMap": "57:1427:0:-:0;;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "57:1427:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;57:1427:0;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;:::i;:::-;;;;;744:120;;57:1427;;;;;744:120;;57:1427;;;;;744:120;;839:15;;57:1427;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;880:119;57:1427;;;;;;880:119;57:1427;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;839:15;;;;880:119;;;:::i;:::-;;;;57:1427;;;;;-1:-1:-1;57:1427:0;;;;;;;;;;;;;;;;;;;;;;;;;;880:119;57:1427;;;;;;;880:119;57:1427;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;57:1427:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:1427:0;;;;;;;;;;;;;;;;;;-1:-1:-1;57:1427:0;;;;;;;;;;;;;-1:-1:-1;;;57:1427:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:1427:0;;;;;;;-1:-1:-1;57:1427:0;;;;;;-1:-1:-1;57:1427:0;;;;;;;;;;;;;-1:-1:-1;;;57:1427:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:1427:0;;;;;;;-1:-1:-1;57:1427:0;;;;;;;;;;;;-1:-1:-1;;57:1427:0;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;:::i;:::-;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;1361:14;1389:17;;57:1427;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;57:1427:0;;;;;:::i;:::-;;;;;;;;;;;;;-1:-1:-1;57:1427:0;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;-1:-1:-1;57:1427:0;;;;;;;;-1:-1:-1;;57:1427:0;;;;:::o;:::-;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;;;;;;;:::i;:::-;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;57:1427:0;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;:::o;:::-;;;-1:-1:-1;57:1427:0;;;;;-1:-1:-1;57:1427:0;;-1:-1:-1;57:1427:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+    "sourcePath": "/Users/jonathanjeshua/AuthentiX/sol smart contract/food_safety.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.33+commit.64118f21"
+    },
+    "ast": {
+        "absolutePath": "/Users/jonathanjeshua/AuthentiX/sol smart contract/food_safety.sol",
+        "exportedSymbols": {
+            "IoTDataIntegrity": [
+                87
+            ]
+        },
+        "id": 88,
+        "license": "MIT",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".0"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "32:23:0"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "IoTDataIntegrity",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 87,
+                "linearizedBaseContracts": [
+                    87
+                ],
+                "name": "IoTDataIntegrity",
+                "nameLocation": "66:16:0",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "canonicalName": "IoTDataIntegrity.BatchRecord",
+                        "id": 10,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 3,
+                                "mutability": "mutable",
+                                "name": "batchId",
+                                "nameLocation": "169:7:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 10,
+                                "src": "162:14:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_string_storage_ptr",
+                                    "typeString": "string"
+                                },
+                                "typeName": {
+                                    "id": 2,
+                                    "name": "string",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "162:6:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_storage_ptr",
+                                        "typeString": "string"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 5,
+                                "mutability": "mutable",
+                                "name": "timePeriod",
+                                "nameLocation": "193:10:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 10,
+                                "src": "186:17:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_string_storage_ptr",
+                                    "typeString": "string"
+                                },
+                                "typeName": {
+                                    "id": 4,
+                                    "name": "string",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "186:6:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_storage_ptr",
+                                        "typeString": "string"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 7,
+                                "mutability": "mutable",
+                                "name": "dataHash",
+                                "nameLocation": "220:8:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 10,
+                                "src": "213:15:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_string_storage_ptr",
+                                    "typeString": "string"
+                                },
+                                "typeName": {
+                                    "id": 6,
+                                    "name": "string",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "213:6:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_storage_ptr",
+                                        "typeString": "string"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 9,
+                                "mutability": "mutable",
+                                "name": "timestamp",
+                                "nameLocation": "246:9:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 10,
+                                "src": "238:17:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 8,
+                                    "name": "uint256",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "238:7:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "BatchRecord",
+                        "nameLocation": "140:11:0",
+                        "nodeType": "StructDefinition",
+                        "scope": 87,
+                        "src": "133:129:0",
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "id": 15,
+                        "mutability": "mutable",
+                        "name": "records",
+                        "nameLocation": "341:7:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 87,
+                        "src": "302:46:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_BatchRecord_$10_storage_$",
+                            "typeString": "mapping(string => struct IoTDataIntegrity.BatchRecord)"
+                        },
+                        "typeName": {
+                            "id": 14,
+                            "keyName": "",
+                            "keyNameLocation": "-1:-1:-1",
+                            "keyType": {
+                                "id": 11,
+                                "name": "string",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "310:6:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_string_storage_ptr",
+                                    "typeString": "string"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "302:30:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_BatchRecord_$10_storage_$",
+                                "typeString": "mapping(string => struct IoTDataIntegrity.BatchRecord)"
+                            },
+                            "valueName": "",
+                            "valueNameLocation": "-1:-1:-1",
+                            "valueType": {
+                                "id": 13,
+                                "nodeType": "UserDefinedTypeName",
+                                "pathNode": {
+                                    "id": 12,
+                                    "name": "BatchRecord",
+                                    "nameLocations": [
+                                        "320:11:0"
+                                    ],
+                                    "nodeType": "IdentifierPath",
+                                    "referencedDeclaration": 10,
+                                    "src": "320:11:0"
+                                },
+                                "referencedDeclaration": 10,
+                                "src": "320:11:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_BatchRecord_$10_storage_ptr",
+                                    "typeString": "struct IoTDataIntegrity.BatchRecord"
+                                }
+                            }
+                        },
+                        "visibility": "private"
+                    },
+                    {
+                        "anonymous": false,
+                        "eventSelector": "ac88869750298bebd7a88efdd702354a73a7c715232bf57045431d45beba4f14",
+                        "id": 25,
+                        "name": "DataStored",
+                        "nameLocation": "404:10:0",
+                        "nodeType": "EventDefinition",
+                        "parameters": {
+                            "id": 24,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 17,
+                                    "indexed": false,
+                                    "mutability": "mutable",
+                                    "name": "batchId",
+                                    "nameLocation": "431:7:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 25,
+                                    "src": "424:14:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 16,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "424:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 19,
+                                    "indexed": false,
+                                    "mutability": "mutable",
+                                    "name": "timePeriod",
+                                    "nameLocation": "455:10:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 25,
+                                    "src": "448:17:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 18,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "448:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 21,
+                                    "indexed": false,
+                                    "mutability": "mutable",
+                                    "name": "dataHash",
+                                    "nameLocation": "482:8:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 25,
+                                    "src": "475:15:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 20,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "475:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 23,
+                                    "indexed": false,
+                                    "mutability": "mutable",
+                                    "name": "timestamp",
+                                    "nameLocation": "508:9:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 25,
+                                    "src": "500:17:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 22,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "500:7:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "414:109:0"
+                        },
+                        "src": "398:126:0"
+                    },
+                    {
+                        "body": {
+                            "id": 54,
+                            "nodeType": "Block",
+                            "src": "714:292:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 44,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "baseExpression": {
+                                                "id": 34,
+                                                "name": "records",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 15,
+                                                "src": "724:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_BatchRecord_$10_storage_$",
+                                                    "typeString": "mapping(string memory => struct IoTDataIntegrity.BatchRecord storage ref)"
+                                                }
+                                            },
+                                            "id": 36,
+                                            "indexExpression": {
+                                                "id": 35,
+                                                "name": "_batchId",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 27,
+                                                "src": "732:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                }
+                                            },
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "nodeType": "IndexAccess",
+                                            "src": "724:17:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_BatchRecord_$10_storage",
+                                                "typeString": "struct IoTDataIntegrity.BatchRecord storage ref"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "arguments": [
+                                                {
+                                                    "id": 38,
+                                                    "name": "_batchId",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 27,
+                                                    "src": "769:8:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_string_memory_ptr",
+                                                        "typeString": "string memory"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 39,
+                                                    "name": "_timePeriod",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 29,
+                                                    "src": "791:11:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_string_memory_ptr",
+                                                        "typeString": "string memory"
+                                                    }
+                                                },
+                                                {
+                                                    "id": 40,
+                                                    "name": "_dataHash",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 31,
+                                                    "src": "816:9:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_string_memory_ptr",
+                                                        "typeString": "string memory"
+                                                    }
+                                                },
+                                                {
+                                                    "expression": {
+                                                        "id": 41,
+                                                        "name": "block",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967292,
+                                                        "src": "839:5:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_block",
+                                                            "typeString": "block"
+                                                        }
+                                                    },
+                                                    "id": 42,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberLocation": "845:9:0",
+                                                    "memberName": "timestamp",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "839:15:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                }
+                                            ],
+                                            "expression": {
+                                                "argumentTypes": [
+                                                    {
+                                                        "typeIdentifier": "t_string_memory_ptr",
+                                                        "typeString": "string memory"
+                                                    },
+                                                    {
+                                                        "typeIdentifier": "t_string_memory_ptr",
+                                                        "typeString": "string memory"
+                                                    },
+                                                    {
+                                                        "typeIdentifier": "t_string_memory_ptr",
+                                                        "typeString": "string memory"
+                                                    },
+                                                    {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                ],
+                                                "id": 37,
+                                                "name": "BatchRecord",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 10,
+                                                "src": "744:11:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_type$_t_struct$_BatchRecord_$10_storage_ptr_$",
+                                                    "typeString": "type(struct IoTDataIntegrity.BatchRecord storage pointer)"
+                                                }
+                                            },
+                                            "id": 43,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "kind": "structConstructorCall",
+                                            "lValueRequested": false,
+                                            "nameLocations": [],
+                                            "names": [],
+                                            "nodeType": "FunctionCall",
+                                            "src": "744:120:0",
+                                            "tryCall": false,
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_BatchRecord_$10_memory_ptr",
+                                                "typeString": "struct IoTDataIntegrity.BatchRecord memory"
+                                            }
+                                        },
+                                        "src": "724:140:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_BatchRecord_$10_storage",
+                                            "typeString": "struct IoTDataIntegrity.BatchRecord storage ref"
+                                        }
+                                    },
+                                    "id": 45,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "724:140:0"
+                                },
+                                {
+                                    "eventCall": {
+                                        "arguments": [
+                                            {
+                                                "id": 47,
+                                                "name": "_batchId",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 27,
+                                                "src": "904:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                }
+                                            },
+                                            {
+                                                "id": 48,
+                                                "name": "_timePeriod",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 29,
+                                                "src": "926:11:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                }
+                                            },
+                                            {
+                                                "id": 49,
+                                                "name": "_dataHash",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 31,
+                                                "src": "951:9:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                }
+                                            },
+                                            {
+                                                "expression": {
+                                                    "id": 50,
+                                                    "name": "block",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967292,
+                                                    "src": "974:5:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_block",
+                                                        "typeString": "block"
+                                                    }
+                                                },
+                                                "id": 51,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberLocation": "980:9:0",
+                                                "memberName": "timestamp",
+                                                "nodeType": "MemberAccess",
+                                                "src": "974:15:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            ],
+                                            "id": 46,
+                                            "name": "DataStored",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 25,
+                                            "src": "880:10:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$returns$__$",
+                                                "typeString": "function (string memory,string memory,string memory,uint256)"
+                                            }
+                                        },
+                                        "id": 52,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "nameLocations": [],
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "880:119:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 53,
+                                    "nodeType": "EmitStatement",
+                                    "src": "875:124:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "9b251eae",
+                        "id": 55,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "storeDataHash",
+                        "nameLocation": "587:13:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 32,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 27,
+                                    "mutability": "mutable",
+                                    "name": "_batchId",
+                                    "nameLocation": "624:8:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 55,
+                                    "src": "610:22:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 26,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "610:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 29,
+                                    "mutability": "mutable",
+                                    "name": "_timePeriod",
+                                    "nameLocation": "656:11:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 55,
+                                    "src": "642:25:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 28,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "642:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 31,
+                                    "mutability": "mutable",
+                                    "name": "_dataHash",
+                                    "nameLocation": "691:9:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 55,
+                                    "src": "677:23:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 30,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "677:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "600:106:0"
+                        },
+                        "returnParameters": {
+                            "id": 33,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "714:0:0"
+                        },
+                        "scope": 87,
+                        "src": "578:428:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 85,
+                            "nodeType": "Block",
+                            "src": "1275:207:0",
+                            "statements": [
+                                {
+                                    "assignments": [
+                                        70
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 70,
+                                            "mutability": "mutable",
+                                            "name": "record",
+                                            "nameLocation": "1304:6:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 85,
+                                            "src": "1285:25:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "memory",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_BatchRecord_$10_memory_ptr",
+                                                "typeString": "struct IoTDataIntegrity.BatchRecord"
+                                            },
+                                            "typeName": {
+                                                "id": 69,
+                                                "nodeType": "UserDefinedTypeName",
+                                                "pathNode": {
+                                                    "id": 68,
+                                                    "name": "BatchRecord",
+                                                    "nameLocations": [
+                                                        "1285:11:0"
+                                                    ],
+                                                    "nodeType": "IdentifierPath",
+                                                    "referencedDeclaration": 10,
+                                                    "src": "1285:11:0"
+                                                },
+                                                "referencedDeclaration": 10,
+                                                "src": "1285:11:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_BatchRecord_$10_storage_ptr",
+                                                    "typeString": "struct IoTDataIntegrity.BatchRecord"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 74,
+                                    "initialValue": {
+                                        "baseExpression": {
+                                            "id": 71,
+                                            "name": "records",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 15,
+                                            "src": "1313:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_mapping$_t_string_memory_ptr_$_t_struct$_BatchRecord_$10_storage_$",
+                                                "typeString": "mapping(string memory => struct IoTDataIntegrity.BatchRecord storage ref)"
+                                            }
+                                        },
+                                        "id": 73,
+                                        "indexExpression": {
+                                            "id": 72,
+                                            "name": "_batchId",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 57,
+                                            "src": "1321:8:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_string_memory_ptr",
+                                                "typeString": "string memory"
+                                            }
+                                        },
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "IndexAccess",
+                                        "src": "1313:17:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_BatchRecord_$10_storage",
+                                            "typeString": "struct IoTDataIntegrity.BatchRecord storage ref"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1285:45:0"
+                                },
+                                {
+                                    "expression": {
+                                        "components": [
+                                            {
+                                                "expression": {
+                                                    "id": 75,
+                                                    "name": "record",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 70,
+                                                    "src": "1361:6:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_struct$_BatchRecord_$10_memory_ptr",
+                                                        "typeString": "struct IoTDataIntegrity.BatchRecord memory"
+                                                    }
+                                                },
+                                                "id": 76,
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberLocation": "1368:7:0",
+                                                "memberName": "batchId",
+                                                "nodeType": "MemberAccess",
+                                                "referencedDeclaration": 3,
+                                                "src": "1361:14:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                }
+                                            },
+                                            {
+                                                "expression": {
+                                                    "id": 77,
+                                                    "name": "record",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 70,
+                                                    "src": "1389:6:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_struct$_BatchRecord_$10_memory_ptr",
+                                                        "typeString": "struct IoTDataIntegrity.BatchRecord memory"
+                                                    }
+                                                },
+                                                "id": 78,
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberLocation": "1396:10:0",
+                                                "memberName": "timePeriod",
+                                                "nodeType": "MemberAccess",
+                                                "referencedDeclaration": 5,
+                                                "src": "1389:17:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                }
+                                            },
+                                            {
+                                                "expression": {
+                                                    "id": 79,
+                                                    "name": "record",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 70,
+                                                    "src": "1420:6:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_struct$_BatchRecord_$10_memory_ptr",
+                                                        "typeString": "struct IoTDataIntegrity.BatchRecord memory"
+                                                    }
+                                                },
+                                                "id": 80,
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberLocation": "1427:8:0",
+                                                "memberName": "dataHash",
+                                                "nodeType": "MemberAccess",
+                                                "referencedDeclaration": 7,
+                                                "src": "1420:15:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_string_memory_ptr",
+                                                    "typeString": "string memory"
+                                                }
+                                            },
+                                            {
+                                                "expression": {
+                                                    "id": 81,
+                                                    "name": "record",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 70,
+                                                    "src": "1449:6:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_struct$_BatchRecord_$10_memory_ptr",
+                                                        "typeString": "struct IoTDataIntegrity.BatchRecord memory"
+                                                    }
+                                                },
+                                                "id": 82,
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberLocation": "1456:9:0",
+                                                "memberName": "timestamp",
+                                                "nodeType": "MemberAccess",
+                                                "referencedDeclaration": 9,
+                                                "src": "1449:16:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            }
+                                        ],
+                                        "id": 83,
+                                        "isConstant": false,
+                                        "isInlineArray": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "TupleExpression",
+                                        "src": "1347:128:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_uint256_$",
+                                            "typeString": "tuple(string memory,string memory,string memory,uint256)"
+                                        }
+                                    },
+                                    "functionReturnParameters": 67,
+                                    "id": 84,
+                                    "nodeType": "Return",
+                                    "src": "1340:135:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "557c0563",
+                        "id": 86,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "getBatchRecord",
+                        "nameLocation": "1075:14:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 58,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 57,
+                                    "mutability": "mutable",
+                                    "name": "_batchId",
+                                    "nameLocation": "1104:8:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 86,
+                                    "src": "1090:22:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 56,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1090:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1089:24:0"
+                        },
+                        "returnParameters": {
+                            "id": 67,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 60,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 86,
+                                    "src": "1172:13:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 59,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1172:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 62,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 86,
+                                    "src": "1199:13:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 61,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1199:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 64,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 86,
+                                    "src": "1226:13:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "memory",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string"
+                                    },
+                                    "typeName": {
+                                        "id": 63,
+                                        "name": "string",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1226:6:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_string_storage_ptr",
+                                            "typeString": "string"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 66,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 86,
+                                    "src": "1253:7:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 65,
+                                        "name": "uint256",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1253:7:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1158:112:0"
+                        },
+                        "scope": 87,
+                        "src": "1066:416:0",
+                        "stateMutability": "view",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 88,
+                "src": "57:1427:0",
+                "usedErrors": [],
+                "usedEvents": [
+                    25
+                ]
+            }
+        ],
+        "src": "32:1452:0"
+    },
+    "functionHashes": {
+        "getBatchRecord(string)": "557c0563",
+        "storeDataHash(string,string,string)": "9b251eae"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "377200",
+            "executionCost": "418",
+            "totalCost": "377618"
+        },
+        "external": {
+            "getBatchRecord(string)": "infinite",
+            "storeDataHash(string,string,string)": "infinite"
+        }
+    }
+}
